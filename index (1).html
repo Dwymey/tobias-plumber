@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tobias Plomero Puerto Rico | Servicios de Plomería</title>
+    <meta name="description" content="Tobias Plomero Puerto Rico ofrece servicios de plomería con atención responsable, servicio de calidad y trato personalizado. Llame al (939) 289-6900." />
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN & Configuración -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            colors: {
+              primary: {
+                50: '#f0f7ff',
+                100: '#e0f0fe',
+                200: '#bae0fd',
+                300: '#7cc7fb',
+                400: '#38a9f8',
+                500: '#0e8ce9',
+                600: '#026dc6',
+                700: '#0357a1',
+                800: '#074b85',
+                900: '#0c3f6e',
+              },
+              navy: {
+                900: '#0f172a',
+                950: '#020617',
+              }
+            },
+            boxShadow: {
+              soft: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
+              premium: '0 20px 50px -12px rgba(0, 0, 0, 0.1)',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen font-sans bg-white text-slate-800 selection:bg-primary-100 selection:text-primary-900 overflow-x-hidden pt-16 md:pt-20">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 transition-all duration-300">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <a href="#inicio" class="flex flex-col">
+            <span class="font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-navy-900">
+              Tobias Plomero
+            </span>
+            <span class="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold text-primary-600">
+              Puerto Rico
+            </span>
+          </a>
+
+          <div class="hidden md:flex items-center gap-6 lg:gap-8">
+            <a href="#inicio" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">Inicio</a>
+            <a href="#servicios" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">Servicios</a>
+            <a href="#nosotros" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">Nosotros</a>
+            <a href="#opiniones" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">Opiniones</a>
+            <a href="#contacto" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors">Contacto</a>
+            <a href="tel:+19392896900" class="bg-primary-600 text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-primary-700 transition-all shadow-md active:scale-95">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Llamar Ahora
+            </a>
+          </div>
+
+          <button id="menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-lg text-navy-900 hover:bg-slate-50 focus:outline-none">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menú Móvil -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl transition-all">
+        <div class="flex flex-col p-5 gap-3">
+          <a href="#inicio" class="mobile-link text-base font-bold text-navy-900 py-2 border-b border-slate-50">Inicio</a>
+          <a href="#servicios" class="mobile-link text-base font-bold text-navy-900 py-2 border-b border-slate-50">Servicios</a>
+          <a href="#nosotros" class="mobile-link text-base font-bold text-navy-900 py-2 border-b border-slate-50">Nosotros</a>
+          <a href="#opiniones" class="mobile-link text-base font-bold text-navy-900 py-2 border-b border-slate-50">Opiniones</a>
+          <a href="#contacto" class="mobile-link text-base font-bold text-navy-900 py-2 border-b border-slate-50">Contacto</a>
+          <a href="tel:+19392896900" class="bg-primary-600 text-white px-5 py-3.5 rounded-full font-bold transition-all hover:bg-primary-700 flex items-center justify-center gap-2 text-base mt-2 shadow-md">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Llamar Ahora
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center py-12 lg:py-20 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40 lg:to-transparent z-10"></div>
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2070" alt="Plomería profesional" class="w-full h-full object-cover object-center" />
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+        <div class="max-w-xl lg:max-w-2xl">
+          <div class="flex items-center gap-2 mb-4 sm:mb-6">
+            <div class="flex text-amber-400">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="text-navy-900 font-bold text-sm sm:text-base">5.0</span>
+            <span class="text-slate-500 text-xs sm:text-sm">| 6 opiniones en Google</span>
+          </div>
+
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-navy-900 leading-[1.15] mb-4 sm:mb-6">
+            Plomería profesional y <span class="text-primary-600 italic">confiable</span> en Puerto Rico
+          </h1>
+
+          <p class="text-base sm:text-lg lg:text-xl text-slate-600 mb-8 leading-relaxed">
+            Soluciones de plomería con atención responsable, servicio de calidad y trato personalizado para cada uno de nuestros clientes.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 sm:gap-4">
+            <a href="tel:+19392896900" class="bg-primary-600 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold transition-all hover:bg-primary-700 hover:shadow-lg active:scale-95 flex items-center justify-center gap-2 text-base sm:text-lg">
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Llamar Ahora
+            </a>
+            <a href="#contacto" class="bg-white text-slate-700 border border-slate-200 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold transition-all hover:bg-slate-50 active:scale-95 flex items-center justify-center gap-2 text-base sm:text-lg group">
+              Contacto
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TrustBar -->
+    <section class="bg-slate-50 border-y border-slate-100 py-8 sm:py-10">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex text-amber-400">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="flex flex-col text-left">
+              <span class="text-xl sm:text-2xl font-bold text-navy-900 leading-none">5.0</span>
+              <span class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-bold">6 opiniones en Google</span>
+            </div>
+          </div>
+          <div class="h-px w-full md:h-12 md:w-px bg-slate-200"></div>
+          <div>
+            <p class="text-slate-600 font-medium text-sm sm:text-base lg:text-lg">
+              Clientes que confían en nuestro trabajo en Puerto Rico.
+            </p>
+          </div>
+          <div class="hidden lg:flex items-center gap-8 opacity-50">
+            <span class="font-serif text-lg font-bold text-navy-900">Profesional</span>
+            <span class="font-serif text-lg font-bold text-navy-900">Responsable</span>
+            <span class="font-serif text-lg font-bold text-navy-900">Puntual</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-16 sm:py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy-900 mb-4 sm:mb-6">Servicios de Plomería</h2>
+          <div class="w-16 sm:w-20 h-1.5 bg-primary-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0-.83-.83-.83-2.17 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 3.26-2.17-2.17a2 2 0 0 0-2.83 0L10.5 6.5 17.5 13.5l5.41-5.41a2 2 0 0 0 0-2.83Z"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Reparación de tuberías</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Soluciones para problemas y daños en tuberías.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Reparación de fugas</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Identificación y solución de fugas de agua.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Destape de tuberías y desagües</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Ayuda con obstrucciones y problemas de drenaje.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-2.12 0 1.5 1.5 0 0 0 0 2.12L7 8"/><path d="M2 12h20"/><path d="M7 12v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-5"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Reparación de baños</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Soluciones para problemas comunes en baños.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Reparación de grifos</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Reparación y mantenimiento de componentes de plomería.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Problemas de agua</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Evaluación y solución de problemas relacionados con sistemas de agua.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Plomería residencial</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Servicios para hogares y propiedades residenciales.</p>
+          </div>
+
+          <div class="group p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-100 shadow-soft hover:shadow-premium transition-all duration-300">
+            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary-50 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-2 leading-tight">Plomería para negocios</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">Soluciones para establecimientos y propiedades comerciales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por Qué Elegirnos -->
+    <section class="py-16 sm:py-24 bg-navy-900 text-white relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-primary-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">¿Por qué elegir a Tobias Plomero?</h2>
+          <p class="text-slate-400 text-sm sm:text-lg">Nuestro compromiso es brindar un servicio que supere sus expectativas a través de valores fundamentales.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div class="flex gap-4 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-primary-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-1.5">Atención cordial</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Trato respetuoso y atención enfocada en cada cliente.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-primary-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-1.5">Responsabilidad</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Compromiso con brindar un servicio responsable.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-primary-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-1.5">Puntualidad</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Valoramos el tiempo de nuestros clientes.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-primary-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-1.5">Trabajo de calidad</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Enfoque en realizar un trabajo cuidadoso y profesional.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-primary-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-1.5">Atención personalizada</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Cada situación recibe atención según las necesidades del cliente.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+            <svg class="w-6 h-6 text-primary-400 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold mb-1.5">Compromiso total</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Buscamos ofrecer una experiencia profesional de principio a fin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Opiniones -->
+    <section id="opiniones" class="py-16 sm:py-24 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center md:items-end justify-between mb-12 sm:mb-16 gap-6">
+          <div class="max-w-2xl text-center md:text-left">
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy-900 mb-4 sm:mb-6">Lo que dicen nuestros clientes</h2>
+            <div class="w-16 sm:w-20 h-1.5 bg-primary-600 rounded-full mx-auto md:mx-0"></div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full md:w-auto">
+            <button id="toggle-form-btn" class="w-full sm:w-auto bg-primary-600 text-white px-6 py-3 rounded-full font-semibold transition-all hover:bg-primary-700 hover:shadow-lg active:scale-95 text-sm">Escribir Opinión</button>
+            <div class="w-full sm:w-auto bg-white p-4 sm:p-5 rounded-2xl shadow-soft border border-slate-100 flex items-center justify-center gap-5">
+              <div class="text-center">
+                <div class="text-2xl sm:text-3xl font-bold text-navy-900">5.0</div>
+                <div class="flex text-amber-400 justify-center">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+              </div>
+              <div class="h-8 w-px bg-slate-200"></div>
+              <div id="review-count" class="text-slate-500 font-bold text-xs uppercase tracking-wider text-left">
+                3 opiniones<br/>totales
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario de Opinión -->
+        <div id="review-form-container" class="hidden mb-12">
+          <form id="review-form" class="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-primary-100 max-w-2xl mx-auto">
+            <h3 class="text-lg sm:text-xl font-bold text-navy-900 mb-4 sm:mb-6">Tu opinión es importante</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">Nombre</label>
+                <input type="text" id="review-name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-primary-600 text-sm" placeholder="Tu nombre" />
+              </div>
+              <div>
+                <label class="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">Comentario</label>
+                <textarea id="review-content" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-primary-600 resize-none text-sm" rows="3" placeholder="Cuéntanos tu experiencia..."></textarea>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button type="submit" class="w-full sm:w-auto bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition-all text-sm">Publicar Opinión</button>
+                <button type="button" id="cancel-form-btn" class="w-full sm:w-auto bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-full font-semibold hover:bg-slate-50 transition-all text-sm">Cancelar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div class="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 mb-4">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-slate-700 italic text-sm sm:text-base mb-6 leading-relaxed">"Quiero agradecer a Tobías por el excelente servicio que me brindó. Desde el primer momento en que me comuniqué por llamada fue muy cordial y atento..."</p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-50">
+              <div class="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold text-sm">F</div>
+              <div class="font-bold text-navy-900 text-sm">Florivette Colon</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 mb-4">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-slate-700 italic text-sm sm:text-base mb-6 leading-relaxed">"Responsable y puntual ❤️ excelente trabajo"</p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-50">
+              <div class="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold text-sm">J</div>
+              <div class="font-bold text-navy-900 text-sm">Jessybeth Camacho</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-soft border border-slate-100 flex flex-col justify-between">
+            <div>
+              <div class="flex text-amber-400 mb-4">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-slate-700 italic text-sm sm:text-base mb-6 leading-relaxed">"Excelente servicio, amable y muy responsable."</p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-50">
+              <div class="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold text-sm">S</div>
+              <div class="font-bold text-navy-900 text-sm">Sofia Vila</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-16 sm:py-24 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy-900 mb-6 sm:mb-8">Sobre Tobias Plomero Puerto Rico</h2>
+          <div class="space-y-4 sm:space-y-6 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p>Tobias Plomero Puerto Rico es una empresa dedicada a brindar servicios de plomería con un enfoque inquebrantable en la responsabilidad y el servicio al cliente.</p>
+            <p>Nos distinguimos por ofrecer una atención personalizada, entendiendo que cada hogar o negocio tiene necesidades únicas. Nuestro objetivo es resolver sus problemas de plomería con eficiencia, puntualidad y la cordialidad que usted merece.</p>
+            <p>Cuando elige a Tobias, está optando por un trabajo de calidad y la tranquilidad de saber que su propiedad está en manos de un profesional comprometido con el bienestar de sus clientes en todo Puerto Rico.</p>
+          </div>
+          <div class="mt-8 sm:mt-12 grid grid-cols-2 gap-4 sm:gap-6 max-w-xl mx-auto">
+             <div class="p-5 sm:p-8 bg-slate-50 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-soft">
+                <div class="text-3xl sm:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">100%</div>
+                <div class="text-[10px] sm:text-xs text-slate-500 uppercase font-bold tracking-widest">Responsable</div>
+             </div>
+             <div class="p-5 sm:p-8 bg-slate-50 rounded-2xl sm:rounded-3xl border border-slate-100 shadow-soft">
+                <div class="text-3xl sm:text-4xl font-bold text-primary-600 mb-1 sm:mb-2">Local</div>
+                <div class="text-[10px] sm:text-xs text-slate-500 uppercase font-bold tracking-widest">Puerto Rico</div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 sm:py-24 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12 sm:mb-16">
+            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-navy-900 mb-4 sm:mb-6">Contacto</h2>
+            <p class="text-slate-600 text-sm sm:text-lg max-w-2xl mx-auto">¿Tiene alguna consulta o requiere servicio inmediato? Comuníquese directamente con nosotros a través de los siguientes canales.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+            <div class="bg-navy-900 text-white p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-premium relative overflow-hidden flex flex-col justify-between">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-primary-600/20 rounded-full blur-2xl pointer-events-none"></div>
+              <div>
+                <span class="inline-block bg-primary-600/30 text-primary-300 text-[10px] sm:text-xs uppercase tracking-widest font-bold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-4 sm:mb-6">Atención Directa</span>
+                <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">¿Necesita asistencia?</h3>
+                <p class="text-slate-300 text-sm sm:text-base mb-8 leading-relaxed">Llámenos directamente para coordinar su servicio o resolver cualquier emergencia de plomería.</p>
+              </div>
+              <a href="tel:+19392896900" class="inline-flex w-full items-center justify-center gap-3 bg-primary-600 text-white font-bold text-lg sm:text-xl px-6 sm:px-8 py-4 rounded-full hover:bg-primary-500 transition-all shadow-lg active:scale-95">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                (939) 289-6900
+              </a>
+            </div>
+
+            <div class="bg-white p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-soft border border-slate-100 flex flex-col justify-center space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary-50 rounded-2xl flex items-center justify-center text-primary-600 shrink-0">
+                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-lg mb-1">Área de Cobertura</h4>
+                  <p class="text-slate-600 text-sm leading-relaxed">Servicio disponible para residencias y comercios en todo Puerto Rico.</p>
+                </div>
+              </div>
+
+              <div class="h-px bg-slate-100"></div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-primary-50 rounded-2xl flex items-center justify-center text-primary-600 shrink-0">
+                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-lg mb-1">Horario de Servicio</h4>
+                  <p class="text-slate-600 text-sm leading-relaxed">Lunes a Sábado: Atención continua.<br/><span class="text-xs font-semibold text-primary-600">Disponibilidad para urgencias telefónicas</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="bg-primary-600 text-white py-10 sm:py-12 text-center">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="text-xl sm:text-2xl font-bold mb-2">Servicio Rápido y Confiable</h3>
+        <p class="text-sm sm:text-base text-primary-100 mb-6">Atención personalizada para resolver sus problemas de plomería hoy mismo.</p>
+        <a href="tel:+19392896900" class="inline-block bg-white text-primary-600 font-bold px-8 py-3.5 rounded-full hover:bg-slate-100 transition-colors shadow-md text-sm sm:text-base">
+          Llamar Ahora
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-slate-400 py-8 sm:py-12 border-t border-slate-800 text-center text-xs sm:text-sm">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <p>&copy; <span id="year"></span> Tobias Plomero Puerto Rico. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Lógica Vanilla JS -->
+    <script>
+      // Año automático
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Control del Menú Móvil
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Control del Formulario de Reseñas
+      const toggleFormBtn = document.getElementById('toggle-form-btn');
+      const cancelFormBtn = document.getElementById('cancel-form-btn');
+      const reviewFormContainer = document.getElementById('review-form-container');
+      const reviewForm = document.getElementById('review-form');
+      const reviewsGrid = document.getElementById('reviews-grid');
+      const reviewCount = document.getElementById('review-count');
+
+      let totalReviews = 3;
+
+      toggleFormBtn.addEventListener('click', () => {
+        reviewFormContainer.classList.toggle('hidden');
+      });
+
+      cancelFormBtn.addEventListener('click', () => {
+        reviewFormContainer.classList.add('hidden');
+      });
+
+      reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('review-name').value;
+        const content = document.getElementById('review-content').value;
+
+        if (name && content) {
+          totalReviews++;
+          reviewCount.innerHTML = `${totalReviews} opiniones<br/>totales`;
+
+          const newCard = document.createElement('div');
+          newCard.className = 'bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-soft border border-slate-100 flex flex-col justify-between';
+          newCard.innerHTML = `
+            <div>
+              <div class="flex text-amber-400 mb-4">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="text-slate-700 italic text-sm sm:text-base mb-6 leading-relaxed">"${content}"</p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-50">
+              <div class="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold text-sm">${name.charAt(0).toUpperCase()}</div>
+              <div class="font-bold text-navy-900 text-sm">${name}</div>
+            </div>
+          `;
+
+          reviewsGrid.prepend(newCard);
+          reviewForm.reset();
+          reviewFormContainer.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>
